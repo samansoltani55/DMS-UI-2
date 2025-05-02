@@ -1,0 +1,15 @@
+
+
+<button  nbButton hero status='success' (click)="openWindowForm()">Add New Vendor</button> 
+<nb-card>
+  <nb-card-header>
+    Vendors
+  </nb-card-header>
+
+  
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source"  >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

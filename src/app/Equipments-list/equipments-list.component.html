@@ -1,0 +1,19 @@
+
+<google-map [center]="center" [zoom]="zoom" width="100%" height="15rem"  >
+          
+          <map-marker *ngFor="let eqp of equipmentsList" [position]="{ lat:eqp.lat , lng: eqp.lang }"></map-marker>
+        </google-map>
+
+<button  nbButton hero status='success' (click)="openWindowForm()">Add New Equipments</button> 
+<nb-card>
+  <nb-card-header>
+    Equipments
+  </nb-card-header>
+
+  
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source"  >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

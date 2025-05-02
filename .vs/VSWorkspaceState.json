@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\@theme",
+    "\\src\\app\\@theme\\components",
+    "\\src\\app\\@theme\\components\\header",
+    "\\src\\app\\@theme\\layouts",
+    "\\src\\app\\@theme\\layouts\\one-column",
+    "\\src\\app\\@theme\\layouts\\two-columns",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\ras.home-page"
+  ],
+  "SelectedNode": "\\src\\app\\@theme\\components\\header\\header.component.html",
+  "PreviewInSolutionExplorer": false
+}

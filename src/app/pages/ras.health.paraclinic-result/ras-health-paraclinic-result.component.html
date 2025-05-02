@@ -1,0 +1,72 @@
+
+
+<section class="get-in-touch">
+   <h1 class="title">دریافت جواب آزمایش</h1>
+   <div class="contact-form row">
+      <div class="form-field col-lg-6">
+         <input id="name" class="input-text js-input" type="text"  [(ngModel)]="link">
+         <label class="label" for="name">لینک </label>
+      </div>
+      
+       <!-- <div class="form-field col-lg-6 ">
+          
+         <input id="phone" class="input-text js-input" type="number"  [(ngModel)]="mobile">
+         <label class="label" for="phone">موبایل</label>
+      </div> -->
+    
+ 
+     <!-- <div class="form-field col-lg-6">
+       <input class="submit-btn" type="submit" value="دریافت" (click)="getResult()">
+    </div> -->
+    <button  nbButton status="primary" size="large" [nbSpinner]="isLoading" 
+    nbSpinnerStatus="success" nbSpinnerSize="large"  
+     (click)="getResult()" [disabled]="isLoading"  formControlName="firstCtrl">
+     دریافت
+   </button>
+
+
+    <!-- <pdf-viewer [src]="pdfSrc"
+      [render-text]="true"
+      [original-size]="false"
+      style="width: 400px; height: 500px"
+         ></pdf-viewer> -->
+
+    <section class="get-in-touch" [hidden]="!isloaded">
+      <div class="contact-form row">
+        <div class="form-field col-lg-6">
+           <input id="name" class="input-text js-input" type="text" 
+            [ngModel]="paraClinicResult.paraclinicName" disabled="true"/>
+           <label class="label" for="name">paraclinicName </label>
+        </div>
+        <div class="form-field col-lg-6">
+         <input id="name" class="input-text js-input" type="text" 
+          [ngModel]="paraClinicResult.patientName" disabled="true"/>
+         <label class="label" for="name">نام   </label>
+      </div>
+      <div class="form-field col-lg-6">
+         <input id="name" class="input-text js-input" type="text" 
+          [ngModel]="paraClinicResult.patientFamily" disabled="true"/>
+         <label class="label" for="name">نام خانوادگی  </label>
+      </div>
+      <div class="form-field col-lg-6">
+       <input id="name" class="input-text js-input" type="text" 
+        [ngModel]="paraClinicResult.examDate" disabled="true"/>
+       <label class="label" for="name">examDate  </label>
+    </div>
+    <div class="form-field col-lg-6">
+     <input id="name" class="input-text js-input" type="text" 
+      [ngModel]="paraClinicResult.resultDate" disabled="true"/>
+     <label class="label" for="name">resultDate </label>
+  </div>
+
+       <div class="form-field col-lg-12">
+         <input class="submit-btn" type="submit" value="دانلود فایل   " (click)="downloadFile()">
+      </div>
+     
+     
+     </div>
+    </section>
+
+ </div>
+ </section>
+ 

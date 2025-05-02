@@ -1,0 +1,31 @@
+<ng-template #labelTwo>ثبت نام </ng-template>
+<h3>ثبت نام </h3>
+
+<section class="get-in-touch" >
+   <div class="contact-form row">
+      <div class="form-field col-lg-6">
+         <input id="mobile" class="input-text js-input" type="mobile" [(ngModel)]="mobile"
+          [disabled]="stepOnePassed" />
+         <label class="label" for="name">mobile </label>
+      </div>
+   </div>
+   <div class="form-field col-lg-12">
+      <input class="submit-btn" type="submit" value="ارسال رمز  "  [disabled]="stepOnePassed" (click)="SendOTP()" >
+   </div>
+
+</section>
+<div [hidden]="!stepOnePassed">
+<section class="get-in-touch"  >
+   <div class="contact-form row">
+      <div class="form-field col-lg-6">
+         <input id="mobile" class="input-text js-input" type="number" [(ngModel)]="otp"
+          [disabled]="stepTwoPassed" />
+         <label class="label" for="name">otp </label>
+      </div>
+   </div>
+   <div class="form-field col-lg-12">
+      <input class="submit-btn" type="submit" value="ارسال رمز  "  [disabled]="stepTwoPassed" (click)="Register()" >
+   </div>
+
+</section>
+</div>

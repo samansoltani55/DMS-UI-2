@@ -1,0 +1,89 @@
+<nb-card class="col-md-12 col-lg-12 col-xxxl-12">
+    <nb-card-body>
+      <nb-stepper orientation="horizontal" #stepper>
+        <nb-step [label]="labelOne" >
+          <ng-template #labelOne>ثبت فایل </ng-template>
+          <h3>ثبت فایل </h3>
+
+          <div class="form-field col-lg-12">
+            <label for="file">انتخاب فایل </label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+            <button  nbButton status="primary" size="large" [nbSpinner]="isLoading" 
+                   nbSpinnerStatus="success" nbSpinnerSize="large"  
+                    (click)="uploadFileToActivity()" [disabled]="!isFileSelected || isLoading"  formControlName="firstCtrl">
+                   ثبت فایل
+                  </button>
+
+        </div>
+
+
+          <button nbButton nbStepperNext [disabled]="!stepOnePassed">next</button>
+        </nb-step>
+        
+        <nb-step [label]="labelTwo">
+          <ng-template #labelTwo>ثبت مشخصات فردی </ng-template>
+          <h3>ثبت مشخصات فردی  </h3>
+
+          <section class="get-in-touch">
+          
+            
+            <div class="contact-form row">
+               <div class="form-field col-lg-6">
+                  <input id="name" class="input-text js-input" type="text" 
+                   [(ngModel)]="newMyResult.customerID"/>
+                  <label class="label" for="name">customerID </label>
+               </div>
+               <div class="form-field col-lg-6">
+                <input id="name" class="input-text js-input" type="text" 
+                 [(ngModel)]="newMyResult.docID"/>
+                <label class="label" for="name">docID  </label>
+             </div>
+             <div class="form-field col-lg-6">
+              <input id="name" class="input-text js-input" type="text" 
+               [(ngModel)]="newMyResult.examDate"/>
+              <label class="label" for="name">examDate  </label>
+           </div>
+           <div class="form-field col-lg-6">
+            <input id="name" class="input-text js-input" type="text" 
+             [(ngModel)]="newMyResult.parTrackingCode"/>
+            <label class="label" for="name">parTrackingCode </label>
+         </div>
+         <div class="form-field col-lg-6">
+          <input id="name" class="input-text js-input" type="number" 
+           [(ngModel)]="newMyResult.par_Type"/>
+          <label class="label" for="name">par_Type </label>
+       </div>
+       <div class="form-field col-lg-6">
+        <input id="name" class="input-text js-input" type="text" 
+         [(ngModel)]="newMyResult.resultDate"/>
+        <label class="label" for="name">resultDate </label>
+        <!-- <ng-persian-datepicker>
+          <input type="text" [formControl]="dateValue" />
+        </ng-persian-datepicker> -->
+
+
+
+     </div>
+
+    
+              <div class="form-field col-lg-12">
+                <input class="submit-btn" type="submit" value="ثبت  " (click)="postMyResult()">
+             </div>
+            
+            </div>
+          </section>
+          
+          <!-- <button nbButton nbStepperPrevious>prev</button> -->
+          <button nbButton  nbStepperNext [disabled]="!stepTwoPassed">next</button>
+        </nb-step>
+        
+       
+
+
+
+      </nb-stepper>
+    </nb-card-body>
+  </nb-card>
+
